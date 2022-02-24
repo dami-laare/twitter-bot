@@ -1,0 +1,28 @@
+{
+  "name": "twitter-bot",
+  "version": "1.0.0",
+  "description": "A tweet bot built by DevNexus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dami-laare/twitter-bot.git"
+  },
+  "author": "Temitayo Osunkiyesi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dami-laare/twitter-bot/issues"
+  },
+  "homepage": "https://github.com/dami-laare/twitter-bot#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15",
+    "twit": "^2.2.11",
+    "twitter": "^1.7.1",
+    "twitter-api-v2": "^1.11.0"
+  }
+}
