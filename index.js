@@ -1,5 +1,8 @@
 const { TwitterApi } = require('twitter-api-v2');
 const dotenv = require('dotenv');
+const cron = require('node-cron');
+
+
 
 dotenv.config({ path: './config.env' })
 
@@ -60,4 +63,7 @@ const likeAndRetweetIrenTweets = async () => {
     })
 }
 
-likeAndRetweetIrenTweets();
+const task = cron.schedule('*/15 * * * *', likeAndRetweetIrenTweets)
+
+task.start()
+
