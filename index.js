@@ -1,6 +1,5 @@
 const { TwitterApi } = require('twitter-api-v2');
 const dotenv = require('dotenv');
-const cron = require('node-cron');
 
 
 
@@ -46,7 +45,7 @@ const reply = async (id, text) => {
 const likeAndRetweetIrenTweets = async () => {
     const irenSaidTweets = await myClient.v2.search('#pstirensaid', {
         max_results: 30,
-        
+
     });
     const pastey = await  myClient.v2.userByUsername('pst_iren')
     const pasteysTweets = await myClient.v2.userTimeline(`${pastey.data.id}`, {
